@@ -44,3 +44,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.minecraft-bg {
+  background-image: url('https://images.unsplash.com/photo-1501286353178-1ec871b174f8');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.minecraft-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
