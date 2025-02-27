@@ -10,39 +10,30 @@ import { motion } from 'framer-motion';
 
 const vpsPlans = [
   {
-    name: "Starter VPS",
-    ram: "2GB",
-    cpu: "1 vCore",
-    storage: "20GB SSD",
-    bandwidth: "1TB",
-    price: "9.99",
+    name: "STARTER VPS",
+    ram: "8GB",
+    cpu: "2 vCore",
+    storage: "100GB NVMe",
+    bandwidth: "Unlimited",
+    price: "650",
     popular: false
   },
   {
-    name: "Business VPS",
-    ram: "4GB",
-    cpu: "2 vCore",
-    storage: "50GB SSD",
-    bandwidth: "2TB",
-    price: "19.99",
+    name: "MEDIUM VPS",
+    ram: "32GB",
+    cpu: "4 vCore",
+    storage: "400GB NVMe",
+    bandwidth: "Unlimited",
+    price: "1200",
     popular: true
   },
   {
-    name: "Premium VPS",
-    ram: "8GB",
-    cpu: "4 vCore",
-    storage: "100GB SSD",
-    bandwidth: "5TB",
-    price: "39.99",
-    popular: false
-  },
-  {
-    name: "Enterprise VPS",
-    ram: "16GB",
+    name: "HOSTING VPS",
+    ram: "64GB",
     cpu: "8 vCore",
-    storage: "200GB SSD",
-    bandwidth: "10TB",
-    price: "79.99",
+    storage: "500GB NVMe",
+    bandwidth: "Unlimited",
+    price: "1800",
     popular: false
   }
 ];
@@ -258,11 +249,11 @@ const VPSHosting = () => {
         <section className="py-20 px-4 bg-gray-900/50 backdrop-blur-md">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">VPS Hosting Plans</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">MAPPLE HOST VPS PLANS</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">Choose from our range of high-performance VPS plans designed to meet the needs of any application.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {vpsPlans.map((plan, index) => (
                 <motion.div
                   key={index}
@@ -302,8 +293,8 @@ const VPSHosting = () => {
                   </div>
                   <div className="mb-6">
                     <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">${plan.price}</span>
-                      <span className="text-gray-400">/month</span>
+                      <span className="text-4xl font-bold text-white">₹{plan.price}</span>
+                      <span className="text-gray-400">/monthly</span>
                     </div>
                   </div>
                   <Button
@@ -508,7 +499,6 @@ const VPSHosting = () => {
                 <h4 className="text-white font-semibold mb-4">Products</h4>
                 <ul className="space-y-2">
                   <li><a href="#" className="hover:text-white transition-colors">Minecraft Hosting</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Discord Bot Hosting</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">VPS Hosting</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Web Hosting</a></li>
                 </ul>

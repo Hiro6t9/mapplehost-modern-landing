@@ -10,39 +10,51 @@ import { motion } from 'framer-motion';
 
 const minecraftPlans = [
   {
-    name: "Starter",
+    name: "STARTER",
     ram: "2GB",
-    cpu: "1 vCore",
-    storage: "15GB SSD",
-    price: "5.99",
-    players: "Up to 10",
+    cpu: "100%",
+    storage: "10GB",
+    price: "80",
     popular: false
   },
   {
-    name: "Standard",
+    name: "NORMAL",
     ram: "4GB",
-    cpu: "2 vCore",
-    storage: "30GB SSD",
-    price: "12.99",
-    players: "Up to 25",
+    cpu: "200%",
+    storage: "20GB",
+    price: "160",
     popular: true
   },
   {
-    name: "Premium",
+    name: "PRO",
     ram: "8GB",
-    cpu: "4 vCore",
-    storage: "60GB SSD",
-    price: "24.99",
-    players: "Up to 50",
+    cpu: "400%",
+    storage: "40GB",
+    price: "320",
     popular: false
   },
   {
-    name: "Ultimate",
+    name: "SEMI ADVANCE",
+    ram: "12GB",
+    cpu: "600%",
+    storage: "60GB",
+    price: "480",
+    popular: false
+  },
+  {
+    name: "ADVANCED",
     ram: "16GB",
-    cpu: "8 vCore",
-    storage: "120GB SSD",
-    price: "39.99",
-    players: "100+ players",
+    cpu: "800%",
+    storage: "80GB",
+    price: "640",
+    popular: false
+  },
+  {
+    name: "ULTIMATE",
+    ram: "32GB",
+    cpu: "1600%",
+    storage: "160GB",
+    price: "1,280",
     popular: false
   }
 ];
@@ -188,11 +200,11 @@ const MinecraftHosting = () => {
         <section className="py-20 px-4 bg-gray-900/50 backdrop-blur-md">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Minecraft Server</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">MINECRAFT PLANS</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">Select from our range of high-performance Minecraft hosting plans, designed to meet the needs of every server size.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {minecraftPlans.map((plan, index) => (
                 <motion.div
                   key={index}
@@ -222,17 +234,13 @@ const MinecraftHosting = () => {
                       <span className="text-white font-medium">{plan.cpu}</span>
                     </div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-400">Storage</span>
+                      <span className="text-gray-400">Disk</span>
                       <span className="text-white font-medium">{plan.storage}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Players</span>
-                      <span className="text-white font-medium">{plan.players}</span>
                     </div>
                   </div>
                   <div className="mb-6">
                     <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">${plan.price}</span>
+                      <span className="text-4xl font-bold text-white">₹{plan.price}</span>
                       <span className="text-gray-400">/month</span>
                     </div>
                   </div>
@@ -307,7 +315,6 @@ const MinecraftHosting = () => {
                 <h4 className="text-white font-semibold mb-4">Products</h4>
                 <ul className="space-y-2">
                   <li><a href="#" className="hover:text-white transition-colors">Minecraft Hosting</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Discord Bot Hosting</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">VPS Hosting</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Web Hosting</a></li>
                 </ul>
