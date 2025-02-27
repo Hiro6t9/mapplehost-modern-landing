@@ -180,10 +180,9 @@ const Index = () => {
               <div>
                 <h4 className="text-white font-semibold mb-4">Products</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-white transition-colors">Cloud Hosting</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Dedicated Servers</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Virtual Machines</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Storage Solutions</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Minecraft Hosting</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">VPS Hosting</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Web Hosting</a></li>
                 </ul>
               </div>
               <div>
@@ -200,7 +199,6 @@ const Index = () => {
                 <ul className="space-y-2">
                   <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">API Reference</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Status</a></li>
                 </ul>
               </div>

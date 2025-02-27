@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { MessageSquare, X, Send, Bot, ChevronDown, ChevronUp, Loader2 } from "lucide-react";
+import { MessageSquare, X, Send, Bot, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Message {
@@ -25,9 +25,8 @@ const responses: Record<string, string> = {
   'hi': "Hello! How can I assist you with our hosting services today?",
   'hello': "Hi there! What can I help you with regarding our hosting plans?",
   'minecraft': "Our Minecraft hosting plans start at $5.99/month with instant setup, mods support, and 24/7 availability. Would you like more information about specific plans?",
-  'discord': "We offer specialized Discord bot hosting with 99.9% uptime, starting at just $3.99/month. Each plan includes database integration and continuous monitoring.",
   'vps': "Our VPS plans feature high-performance hardware with NVMe SSDs and dedicated resources. Prices start at $9.99/month with instant provisioning. Need help choosing a plan?",
-  'price': "We offer various hosting solutions starting from $3.99/month for Discord bots, $5.99/month for Minecraft servers, and $9.99/month for VPS hosting. Each plan comes with different resource allocations. Would you like details on a specific service?",
+  'price': "We offer various hosting solutions starting from $5.99/month for Minecraft servers, and $9.99/month for VPS hosting. Each plan comes with different resource allocations. Would you like details on a specific service?",
   'support': "Our support team is available 24/7 through live chat, email, and ticket system. For immediate assistance, you can also check our documentation or knowledge base.",
   'uptime': "We guarantee 99.9% uptime for all our hosting services, backed by our SLA. If we fail to meet this commitment, you'll receive credits on your account.",
   'backup': "Yes, we provide automated daily backups for all hosting plans. Premium plans include more frequent backup options and longer retention periods.",

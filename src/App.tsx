@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Chatbot } from "@/components/Chatbot";
 import Index from "./pages/Index";
 import Minecraft from "./pages/Minecraft";
-import Discord from "./pages/Discord";
 import VPS from "./pages/VPS";
 import NotFound from "./pages/NotFound";
 
@@ -22,7 +21,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/minecraft" element={<Minecraft />} />
-          <Route path="/discord" element={<Discord />} />
           <Route path="/vps" element={<VPS />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

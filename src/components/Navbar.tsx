@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Server, Bot, Monitor, Gamepad2, MessageSquare, Menu, X } from "lucide-react";
+import { Server, Monitor, Gamepad2, Menu, X } from "lucide-react";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,9 +35,6 @@ export const Navbar = () => {
             <Link to="/minecraft" className="text-gray-300 hover:text-white transition-colors flex items-center">
               <Gamepad2 className="h-4 w-4 mr-1" /> Minecraft
             </Link>
-            <Link to="/discord" className="text-gray-300 hover:text-white transition-colors flex items-center">
-              <MessageSquare className="h-4 w-4 mr-1" /> Discord
-            </Link>
             <Link to="/vps" className="text-gray-300 hover:text-white transition-colors flex items-center">
               <Monitor className="h-4 w-4 mr-1" /> VPS
             </Link>
@@ -64,9 +61,6 @@ export const Navbar = () => {
               <Link to="/" className="block text-gray-300 hover:text-white">Home</Link>
               <Link to="/minecraft" className="block text-gray-300 hover:text-white flex items-center">
                 <Gamepad2 className="h-4 w-4 mr-2" /> Minecraft Hosting
-              </Link>
-              <Link to="/discord" className="block text-gray-300 hover:text-white flex items-center">
-                <MessageSquare className="h-4 w-4 mr-2" /> Discord Bot Hosting
               </Link>
               <Link to="/vps" className="block text-gray-300 hover:text-white flex items-center">
                 <Monitor className="h-4 w-4 mr-2" /> VPS Hosting
