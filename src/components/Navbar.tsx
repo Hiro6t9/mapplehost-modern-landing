@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Monitor, Server, Menu, X } from "lucide-react";
+import { Server, Bot, Monitor, Gamepad2, MessageSquare, Menu, X } from "lucide-react";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,17 +23,27 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <Server className="h-6 w-6 text-mapple-400" />
-            <span className="text-xl font-bold text-white">MappleHost</span>
+            <Link to="/" className="flex items-center space-x-2">
+              <Server className="h-6 w-6 text-mapple-400" />
+              <span className="text-xl font-bold text-white">MappleHost</span>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
-            <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
-            <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
-            <Button variant="outline" className="mr-2 text-gray-300 border-gray-700 hover:bg-gray-800">Sign In</Button>
-            <Button className="bg-mapple-600 hover:bg-mapple-700">Get Started</Button>
+          <div className="hidden md:flex items-center space-x-6">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+            <Link to="/minecraft" className="text-gray-300 hover:text-white transition-colors flex items-center">
+              <Gamepad2 className="h-4 w-4 mr-1" /> Minecraft
+            </Link>
+            <Link to="/discord" className="text-gray-300 hover:text-white transition-colors flex items-center">
+              <MessageSquare className="h-4 w-4 mr-1" /> Discord
+            </Link>
+            <Link to="/vps" className="text-gray-300 hover:text-white transition-colors flex items-center">
+              <Monitor className="h-4 w-4 mr-1" /> VPS
+            </Link>
+            <Link to="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link>
+            <Button variant="outline" className="mr-2 text-gray-300 border-gray-700 hover:bg-gray-800 rounded-full">Sign In</Button>
+            <Button className="bg-mapple-600 hover:bg-mapple-700 rounded-full">Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -50,12 +61,20 @@ export const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-gray-900 absolute top-16 left-0 w-full border-b border-gray-800 shadow-lg animate-fade-in">
             <div className="px-4 py-4 space-y-4">
-              <a href="#features" className="block text-gray-300 hover:text-white">Features</a>
-              <a href="#pricing" className="block text-gray-300 hover:text-white">Pricing</a>
-              <a href="#about" className="block text-gray-300 hover:text-white">About</a>
-              <div className="space-y-2">
-                <Button variant="outline" className="w-full text-gray-300 border-gray-700 hover:bg-gray-800">Sign In</Button>
-                <Button className="w-full bg-mapple-600 hover:bg-mapple-700">Get Started</Button>
+              <Link to="/" className="block text-gray-300 hover:text-white">Home</Link>
+              <Link to="/minecraft" className="block text-gray-300 hover:text-white flex items-center">
+                <Gamepad2 className="h-4 w-4 mr-2" /> Minecraft Hosting
+              </Link>
+              <Link to="/discord" className="block text-gray-300 hover:text-white flex items-center">
+                <MessageSquare className="h-4 w-4 mr-2" /> Discord Bot Hosting
+              </Link>
+              <Link to="/vps" className="block text-gray-300 hover:text-white flex items-center">
+                <Monitor className="h-4 w-4 mr-2" /> VPS Hosting
+              </Link>
+              <Link to="#pricing" className="block text-gray-300 hover:text-white">Pricing</Link>
+              <div className="space-y-2 pt-2">
+                <Button variant="outline" className="w-full text-gray-300 border-gray-700 hover:bg-gray-800 rounded-full">Sign In</Button>
+                <Button className="w-full bg-mapple-600 hover:bg-mapple-700 rounded-full">Get Started</Button>
               </div>
             </div>
           </div>
