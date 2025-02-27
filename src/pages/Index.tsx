@@ -57,11 +57,11 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1501286353178-1ec871b174f8')",
-            filter: theme === 'dark' ? "brightness(0.3) blur(3px)" : "brightness(0.8) blur(3px)",
+            backgroundImage: "url('/lovable-uploads/476d2c63-c149-41fb-9464-c5ac5ef59b25.png')",
+            filter: theme === 'dark' ? "brightness(0.6) blur(0px)" : "brightness(0.9) blur(0px)",
           }}
         ></div>
-        <div className={`absolute inset-0 ${theme === 'dark' ? 'bg-gradient-to-b from-gray-900/80 to-gray-900' : 'bg-gradient-to-b from-gray-100/80 to-gray-100'}`}></div>
+        <div className={`absolute inset-0 ${theme === 'dark' ? 'bg-gradient-to-b from-gray-900/40 to-gray-900/70' : 'bg-gradient-to-b from-gray-100/30 to-gray-100/60'}`}></div>
       </div>
       
       <div className="relative z-10">
